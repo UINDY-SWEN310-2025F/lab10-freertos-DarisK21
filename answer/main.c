@@ -8,7 +8,7 @@ void taskFirst(void *p) {
         printf("hello task1: count %d\n", count++);
         vTaskDelay(500 / portTICK_PERIOD_MS);
         if (count > 10) {
-            vTaskDelete(NULL);  
+            vTaskDelete(NULL);
         }
     }
 }
@@ -17,9 +17,9 @@ void taskSecond(void *p) {
     int count = 0;
     for (;;) {
         printf("hello task2: count %d\n", count++);
-        vTaskDelay(600 / portTICK_PERIOD_MS);
+        vTaskDelay(500 / portTICK_PERIOD_MS);  
         if (count > 10) {
-            vTaskDelete(NULL); 
+            vTaskDelete(NULL);
         }
     }
 }
@@ -28,9 +28,9 @@ void taskThird(void *p) {
     int count = 0;
     for (;;) {
         printf("hello task3: count %d\n", count++);
-        vTaskDelay(700 / portTICK_PERIOD_MS);
+        vTaskDelay(500 / portTICK_PERIOD_MS);  
         if (count > 10) {
-            vTaskDelete(NULL);  
+            vTaskDelete(NULL);
         }
     }
 }
